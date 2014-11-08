@@ -25,23 +25,25 @@ window.onload = function(){
 				}
 				
 				
-			else if (stringCharacter == stringCharacter.toUpperCase()) 
+			if (stringCharacter == stringCharacter.toUpperCase()) 
 				{
 					stringCharacter = stringCharacter.toLowerCase();
 				}
 			
 			
-			else if (stringCharacter == stringCharacter.toLowerCase())
+			if (stringCharacter == stringCharacter.toLowerCase())
 				{
 					stringCharacter = stringCharacter.toUpperCase();
 				}
 				
-				stringConverter += stringCharacter;
+			stringConverter += stringCharacter;
 			}
 				return stringConverter;
 			}
 			
 		};
+
+
 	// ------------------------------------------------------------------------------
 
 
