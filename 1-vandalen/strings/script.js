@@ -25,13 +25,13 @@ window.onload = function(){
 				}
 				
 				
-			if (stringCharacter == stringCharacter.toUpperCase()) 
+			else if (stringCharacter == stringCharacter.toUpperCase()) 
 				{
 					stringCharacter = stringCharacter.toLowerCase();
 				}
 			
 			
-			if (stringCharacter == stringCharacter.toLowerCase())
+			else if (stringCharacter == stringCharacter.toLowerCase())
 				{
 					stringCharacter = stringCharacter.toUpperCase();
 				}

@@ -11,14 +11,19 @@ window.onload = function(){
 		console.log("Du gissade: " + number); // Detta nummer är det som användaren gissade på.
 			
 		// Plats för förändring.
-	guesses++;
-	
-	if (number == secret) {
-		return [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde " + guesses + " gissningar för att hitta det."];
-	} 
-			if (number >= 0 && number <= 100) {
-				
-				if (number < secret) {
+		guesses++;
+		
+		number = parseInt(number);
+		if(isNaN(number)){
+			return [false, "Ej ett nummer"];
+		}
+		
+		if (number == secret) {
+			return [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde " + guesses + " gissningar för att hitta det."];
+		} 
+		if (number >= 0 && number <= 100) {
+			
+			if (number < secret) {
 					return [false, "Det hemliga talet är högre!"];
 			}
 				else if (number > secret) {
@@ -28,7 +33,7 @@ window.onload = function(){
 		}
 		else
 		{
-			[false, "Talet är utanför intervallet 0 - 100"];
+			return [false, "Talet är utanför intervallet 0 - 100"];
 		}
 		
 		// Returnera exempelvis: 

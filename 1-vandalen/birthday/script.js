@@ -3,16 +3,29 @@
 window.onload = function(){
 
 	
-	var birthday = function(date){
+	var birthday = function(date)
+	{
+		if (!date.match(/(\d{4})[-\/\.](\d{2})[-\/\.](\d{2})/))
+		{
+			throw new Error ("fel fel");
+		}
 		
-
-
-			// Din kod här.
-
-
-
-
+		var answer = new Date(date);
+		var dateNow = new Date();
+		
+		var dateBirthNext = new Date(dateNow.getFullYear(), answer.getMonth(), answer.getDate(), 
+		dateNow.getHours(), dateNow.getMinutes(), dateNow.getSeconds(), dateNow.getMilliseconds());
+		
+		if (dateBirthNext.getTime() < dateNow.getTime())
+		{
+			dateBirthNext.setFullYear(dateBirthNext.getFullYear() + 1);
+		}
+	
+		var dateBirthWhen = (dateBirthNext.getTime() - dateNow.getTime())/(1000*3600)/24;
+		return Math.ceil(dateBirthWhen);
+	
 	};
+	
 	// ------------------------------------------------------------------------------
 
 
@@ -28,7 +41,7 @@ window.onload = function(){
 		p.classList.remove( "error");
 
 		try {
-			var answer = birthday(input.value) // Läser in texten från textrutan och skickar till funktionen "convertString"
+			var answer = birthday(input.value); // Läser in texten från textrutan och skickar till funktionen "convertString"
 			var message;
 			switch (answer){
 				case 0: message = "Grattis på födelsedagen!";
