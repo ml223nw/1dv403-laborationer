@@ -1,6 +1,6 @@
 "use strict";
 
-function Message(message, date) {
+function Message (message, date) {
     
     this.getText = function() {
         return message;
@@ -23,11 +23,11 @@ function Message(message, date) {
     };
     
     Message.prototype.getHTMLText = function() {
-        return this.getText()+" ("+this.getDate()+")<br>";
+        return this.getText().replace(/[\n\r]/g,"<br />");
     };
         
     Message.prototype.getDateText = function() {
         return " ("+this.getDate()+")";
     };
-    
+
 }

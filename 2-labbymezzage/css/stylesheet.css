@@ -18,11 +18,42 @@ h1 {
 }
 
 textarea {
-    margin-right: auto;
     resize: none;
     border: 1px solid #C6AC00;
 }
 
 #sendbutton {
+    float: right;
+}
+
+#messagesent div {
+    border-style: solid;
+    border-width: 30px;
+    margin-bottom: 7px;
+    font-size:0.8em;
+}
+
+.messagetext {
+    margin-top: 23px;
+    background-color: white;
+    border: 1px solid #C6AC00;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 7px;
+}
+
+.datetext {
+    position:relative; 
+    float: left;
+    font-size: 12px;
+}
+
+footer .datetext {
+    position:relative; 
+    float: left;
+    font-size: 12px;
+}
+
+img {
     float: right;
 }

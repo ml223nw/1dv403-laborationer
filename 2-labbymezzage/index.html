@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Labby Mezzage</title>
         <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-        <script src="js/application.js"></script>
         <script src="js/message.js"></script>
+        <script src="js/messageapp.js"></script>
     </head>
     <body>
         <div id="container">
             <div id="content">
                 <div id="message">
-                <h1>Labby Mezzage</h1>  
+                    <h1>Labby Mezzage</h1>
+                    
                 </div>
-                <form>
-                    <p>
+                    <main>
+                        <div id="messages"></div>
+                        <div id="messagesent"></div>
+                        <//img id="IconDel" src="icons/IconDelete.png" alt="Delete button" width="17" height="17">
+                        <//img id="IconTime" src="icons/IconTime.png" alt="Time button" width="17" height="17">
+                        <div id="counter"></div>
                         <textarea rows="10" cols="100" id="input"></textarea>
-                    </p>
-                    <p>
-                        <input type="submit" value="Send" id="sendbutton">
-                    </p>
-                </form>
+                        <input id="sendButton" type="submit" value="Send"/>
+                    </main>
+               
             </div>
+            
         </div>
     </body>
 </html>
