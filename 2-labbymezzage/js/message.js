@@ -27,7 +27,13 @@ function Message (message, date) {
     };
         
     Message.prototype.getDateText = function() {
-        return " ("+this.getDate()+")";
+        var d = new Date();
+        var currDate = d.getDate();
+        var currMonth = d.getMonth();
+        var currYear = d.getFullYear();
+      
+        
+        return (currDate + "-" + [currMonth] + "-" + currYear);
     };
 
 }

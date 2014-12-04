@@ -54,11 +54,21 @@ var messageApp = {
             messageApp.renderMessage(i);
             textArea = document.getElementById("input").value;
         }
+            messageApp.countMessages(i);
     },
     
-    //
-    //Att göra: funktion för att räkna meddelanden.
-    //
+    
+    countMessages: function(count) {
+        var counter;
+        var counterText;
+        
+        counter = count-1;
+        counter++;
+        
+        counterText;
+        counterText = document.getElementById("counter").innerHTML = "Messages: " + counter;
+        
+    },
     
     renderMessage: function(messageID) {
 

@@ -57,3 +57,11 @@ footer .datetext {
 img {
     float: right;
 }
+
+#counter {
+    float: right;
+}
+
+p {
+ word-wrap: break-word; 
+}
